@@ -13,3 +13,25 @@
   }, 10)
 */
 
+let promise1 = new Promise(function(resolve) {
+  setTimeout( ()=> {
+    var a = 'hello'
+    resolve(a)
+  },10)
+});
+let promise2 = new Promise(function(resolve) {
+  setTimeout( ()=> {
+    var b = 'lagou'
+    resolve(b)
+  },10)
+});
+let promise3 = new Promise(function(resolve) {
+  setTimeout( ()=> {
+    var c = 'I ♥ U'
+    resolve(c)
+  },10)
+});
+let result = Promise.all([promise1,promise2,promise3])
+result.then(res=>{
+ console.log( res.join(' '))
+})
