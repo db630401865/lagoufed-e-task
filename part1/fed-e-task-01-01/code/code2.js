@@ -97,6 +97,6 @@ console.log( firstName(cars) )  // 最终返回 Ferrari FF (第一个 car 的 na
 let _underscore = fp.replace(/\W+/g, '_') // <--无须改动
 
 // 1.实现 sanitizeNames 函数
-let sanitizeNames = fp.flowRight(flowRight(fp.toLower,_underscore),fp.map(e=>e.name))
+let sanitizeNames = fp.flowRight(fp.toLower,_underscore,fp.map(e=>e.name))
 // 2.打印测试
 console.log( sanitizeNames(cars) )
